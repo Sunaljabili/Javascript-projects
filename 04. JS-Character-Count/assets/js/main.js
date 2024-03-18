@@ -1,17 +1,14 @@
 let textBox = document.querySelector(".textBox");
-let countNum = document.querySelector(".count");
+let numberCount = document.querySelector(".count");
 let text = document.querySelector(".text");
+textBox.addEventListener("input", count);
 
-
-textBox.addEventListener("input",count);
-
-function count(){
-    let number =textBox.value.length;
-    countNum.textContent=number;
-    if (number<=100){
-        text.classList.remove("active");
-    }else{
-        text.classList.add("active")
-    }
-   
+function count() {
+  let number = textBox.value.length;
+  numberCount.textContent = number;
+  if (number >= 100) {
+    text.classList.add("active");
+  } else {
+    text.classList.remove("active");
+  }
 }
